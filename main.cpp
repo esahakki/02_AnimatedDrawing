@@ -101,6 +101,7 @@ void Draw( )
 	DrawColumnChart();
 
 	g_NrFrames++;
+	//Sleep(10); // slow down with a fast cpu.
 }
 
 void DrawHouse()
@@ -317,7 +318,7 @@ void DrawPentagram()
 }
 void DrawColumnChart()
 {
-	float basex{ 250.f }, basey{ 10.0f };	// left low corner
+	float basex{ 250.f }, basey{ 30.0f };	// left low corner
 	int box{ 30 };			// width of each box
 	float c[4][3]{			// Bitmap for colour slide.
 		{ 0.15f, 0.25f, 0.25f },
@@ -331,6 +332,10 @@ void DrawColumnChart()
 	// bars drawing loop
 	for (int i = 0; i <= 3; i++)
 	{
+		//basey = basey * sinf(float((g_NrFrames % 360)));
+		basey = basey + 5 * float(sin(M_PI / 180 * ((g_NrFrames-(i+1)*45) % 360)));
+		//basey = basey * sinf(float(g_NrFrames % 360) * float(M_PI / 180 * i)));
+
 		glColor3f(c[i][0], c[i][1], c[i][2]);
 		glBegin(GL_POLYGON);
 		glVertex2f(basex + i * box + 0.0f, basey + 0.0f);
