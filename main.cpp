@@ -42,7 +42,7 @@ void DrawColumnChart();
 // Variables
 SDL_Window* g_pWindow{ nullptr }; // The window we'll be rendering to
 SDL_GLContext g_pContext; // OpenGL context
-int G_NrFrames{ 0 };
+int g_NrFrames{ 0 };
 #pragma endregion coreDeclarations
 
 #pragma region gameDeclarations
@@ -100,7 +100,7 @@ void Draw( )
 	DrawPentagram();
 	DrawColumnChart();
 
-	G_NrFrames++;
+	g_NrFrames++;
 }
 
 void DrawHouse()
@@ -295,7 +295,7 @@ void DrawPentagram()
 {
 	float basex{ 350.f }, basey{ 150.0f }; //left low corner
 	struct Vertices { float x; float y; } v[5];
-	float angle{ 90.0f };
+	float angle{ float(g_NrFrames % 360) };
 	float radius{ 30.0f };
 
 	for (int i = 0; i < 5; i++)	// find x/y coordinates of pentagram corners
