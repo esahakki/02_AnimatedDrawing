@@ -290,4 +290,10 @@
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="SDLWin32.props" />
+    <None Include="SDLx64.props" />
+    <None Include="README.md" />
+    <None Include=".gitignore" />
+  </ItemGroup>
 </Project>
