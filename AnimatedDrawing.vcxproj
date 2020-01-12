@@ -248,6 +248,9 @@
     <ClInclude Include="Libraries\SDL2_ttf-2.0.15\include\SDL_ttf.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="3.5_AnimatedDrawing_StaticDrawing.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

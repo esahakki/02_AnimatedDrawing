@@ -327,17 +327,6 @@ void DrawColumnChart()
 	};
 	float h[4]{ 100.0f,80.0f,60.0f,20.0f };		// height data.
 
-	std::cout << "% people playing games?" << std::endl;
-	std::cout << "In the range [0, 20]? ";
-	std::cin >> h[0];
-	std::cout << "In the range [21, 40]? ";
-	std::cin >> h[1];
-	std::cout << "In the range [41, 60]? ";
-	std::cin >> h[2];
-	std::cout << "Older than 60? ";
-	std::cin >> h[3];
-	std::cin.ignore();
-
 	glLineWidth(0.0f);
 	// bars drawing loop
 	for (int i = 0; i <= 3; i++)
