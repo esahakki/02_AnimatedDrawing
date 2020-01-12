@@ -332,9 +332,7 @@ void DrawColumnChart()
 	// bars drawing loop
 	for (int i = 0; i <= 3; i++)
 	{
-		//basey = basey * sinf(float((g_NrFrames % 360)));
 		basey = basey + 5 * float(sin(M_PI / 180 * ((g_NrFrames-(i+1)*45) % 360)));
-		//basey = basey * sinf(float(g_NrFrames % 360) * float(M_PI / 180 * i)));
 
 		glColor3f(c[i][0], c[i][1], c[i][2]);
 		glBegin(GL_POLYGON);
